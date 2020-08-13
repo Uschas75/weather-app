@@ -7,8 +7,8 @@ dark violet:	rgb(55, 50, 82)
 light violet: 	rgb(130, 97, 114)
 dark sunny:#ff9954
 light sunny:#ffe18e
-dark rainy:#248aee
-light rainy:#6ab7fd
+dark rainy:#4ca3f4
+light rainy:#056ec7
 clean sky:#c0557a
 light clean:#c0557a
 
@@ -83,7 +83,7 @@ body{
     background: linear-gradient(to bottom , #ffe18e,#ff9954);
 }
 .rainy{
-    background: linear-gradient(to bottom , #6ab7fd, #248aee);
+    background: linear-gradient(to bottom , #4ca3f4, #056ec7);
 }
 .cloudy{
 
