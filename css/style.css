@@ -7,6 +7,10 @@ dark violet:	rgb(55, 50, 82)
 light violet: 	rgb(130, 97, 114)
 dark sunny:#ff9954
 light sunny:#ffe18e
+dark rainy:#248aee
+light rainy:#6ab7fd
+clean sky:#c0557a
+light clean:#c0557a
 
 */
 
@@ -23,24 +27,32 @@ body{
 .header{
     background: linear-gradient(to bottom ,rgb(130, 97, 114),rgb(55, 50, 82));
     background-size: cover;
-    height:120vh;
+    height:100vh;
     position:relative;
     font-family: 'Lato', sans-serif;
 }
 
-.title{
+.title span{
     position: absolute;
-    top:10%;
+    top:7%;
     left:50%;
     transform: translateX(-50%);
+    font-size: 45px;
+    font-weight:400;
+    letter-spacing: 14px;
+    color:white;
 }
 
 .custom-input{
     position: absolute;
-    top:20%;
+    top:23%;
     left:50%;
     transform: translateX(-50%);
-    padding:0 40px;
+    padding:0 51px;
+}
+.custom-button{
+    background-color: #a4508b;
+    background-image: linear-gradient(326deg, rgb(55, 50, 82) 0%,rgb(130, 97, 114) 74%);
 }
 .custom-cards{
     position: absolute;
@@ -61,11 +73,21 @@ body{
 }
 .card-shadow{
     box-shadow: 11px 14px 15px -6px rgba(0,0,0,0.51);
-    
+
 }
 .card-main-section{
     padding: 30px 15px;
-    background: linear-gradient(to bottom ,#ffe18e,#ff9954);
+
+}
+.sunny{
+    background: linear-gradient(to bottom , #ffe18e,#ff9954);
+}
+.rainy{
+    background: linear-gradient(to bottom , #6ab7fd, #248aee);
+}
+.cloudy{
+
+    background: linear-gradient(to bottom , #d05c7c,  #9c4474);
 }
 .card-temperature{
     position: relative;
@@ -73,14 +95,26 @@ body{
 .card-degree-condition{
     position:absolute;
     bottom:-1px;
-    left:182px;
+    left:188px;
     color:white;
 }
 .card-sub-section{
     line-height: 21.1px;
-    color:#ff9954;
+
 }
 .card-sub-section i{
     line-height: 1.8px;
     font-size: 27px;
 }
+.sub-sunny{
+    color:#ff9954;
+}
+.sub-rainy{
+    color:#248aee;
+}
+.sub-cloudy{
+    color:#c0557a;
+}
+
+
+

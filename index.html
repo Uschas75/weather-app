@@ -11,27 +11,27 @@
 <header class="header ">
 
     <div class="title">
-        WEATHER APP
+       <span>WEATHER APP</span>
     </div>
 
     <div class="input-group mb-3 search-box custom-input">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <input type="text" class="form-control" placeholder="cities' weather" aria-label="Recipient's username" aria-describedby="button-addon2">
         <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+            <button class="btn btn-outline-secondary border-white text-light custom-button" type="button" id="button-addon2">search</button>
         </div>
     </div>
 
     <div class="container-fluid custom-cards">
         <div class="row">
-
+            <!--card of weather of cities-->
             <div class="col-md-4">
                 <div class="card card-shadow" style="width: 18rem; margin:10px ">
 
                     <!--daily weather report card-->
 
-                    <div class="card-main-section">
+                    <div class="card-main-section sunny">
                         <div class="card-title">
-                            <span>LONDON,UK</span>
+                            <span>DHAKA,BANGLADESH</span>
                         </div>
                         <div class="card-icon d-flex justify-content-center">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -63,13 +63,13 @@
                                     <span>7&#8451</span>
                                 </div>
                                 <div class="card-degree-condition">
-                                    <p>sunny day</p>
+                                    <p>sunny</p>
                                 </div>
                             </div>
                     </div>
 
                     <!--week weather report card-->
-                    <div class="card-sub-section container-fluid"><!--week weather report card-->
+                    <div class="card-sub-section sub-sunny container-fluid"><!--week weather report card-->
                         <div class="row">
                             <div class="col-md-3">
                                 <p>sun</p>
@@ -96,52 +96,160 @@
                     </div>
                 </div>
             </div>
-            <!--daily weather end line-->
+            <!--/daily weather end line-->
+
+            <!--/card of weather of cities-->
 
 
+            <!--card of weather of cities-->
             <div class="col-md-4">
-                <div class="card " style="width: 18rem; margin:10px">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="card card-shadow" style="width: 18rem; margin:10px ">
+
+                    <!--daily weather report card-->
+
+                    <div class="card-main-section rainy">
+                        <div class="card-title">
+                            <span>LONDON,UK</span>
+                        </div>
+                        <div class="card-icon d-flex justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="105" height="105"
+                                 viewBox="0 0 172 172"
+                                 style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z"
+                                fill="none"></path><g fill="#ffffff"><path d="M77.4,17.2c-19.91437,0 -36.12,16.20563 -36.12,36.12c0,0.56438 -0.04031,1.14219 0,1.72c-15.17094,0 -27.52,12.34906 -27.52,27.52c0,15.17094 12.34906,
+                                27.52 27.52,27.52h82.56c18.97375,0 34.4,-15.42625 34.4,-34.4c0,-18.97375 -15.42625,
+                                -34.4 -34.4,-34.4c-4.05812,0 -7.955,0.67188 -11.7175,2.0425c-4.35375,-15.38594 -18.34219,
+                                -26.1225 -34.7225,-26.1225zM86,116.96c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-24.08,24.08c-1.34375,
+                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
+                                -0.29562 2.4725,-0.9675l24.08,-24.08c1.34375,-1.34375 1.34375,-3.60125 0,-4.945c-0.67187,-0.67187 -1.59906,
+                                -0.9675 -2.4725,-0.9675zM44.72,123.84c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-20.64,20.64c-1.34375,
+                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
+                                -0.29562 2.4725,-0.9675l20.64,-20.64c1.34375,-1.34375 1.34375,-3.60125 0,-4.945c-0.67187,-0.67187 -1.59906,
+                                -0.9675 -2.4725,-0.9675zM113.52,123.84c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-20.64,20.64c-1.34375,
+                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
+                                -0.29562 2.4725,-0.9675l20.64,-20.64c1.34375,-1.34375 1.34375,-3.60125 0,
+                                -4.945c-0.67187,-0.67187 -1.59906,-0.9675 -2.4725,-0.9675z"></path></g></g></svg>
+                        </div>
+                        <div class="card-temperature d-flex justify-content-center">
+                            <div class="card-degree">
+                                <span>18&#8451</span>
+                            </div>
+                            <div class="card-degree-condition">
+                                <p>rainy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--week weather report card-->
+                    <div class="card-sub-section sub-rainy container-fluid"><!--week weather report card-->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p>sun</p>
+                                <i class="fas fa-poo-storm"></i>
+                                <p>7&#8451</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p>mon</p>
+                                <i class="fas fa-cloud-rain"></i>
+                                <p>18&#8451</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p>tue</p>
+                                <i class="fas fa-cloud-sun"></i>
+                                <p>20&#8451</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p>wed</p>
+                                <i class="far fa-snowflake"></i>
+                                <p>0&#8451</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+            <!--/daily weather end line-->
 
+            <!--/card of weather of cities-->
+
+
+
+
+            <!--card of weather of cities-->
             <div class="col-md-4">
-                <div class="card " style="width: 18rem; margin:10px">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="card card-shadow" style="width: 18rem; margin:10px ">
+
+                    <!--daily weather report card-->
+
+                    <div class="card-main-section cloudy">
+                        <div class="card-title">
+                            <span>TOKYO,JAPAN</span>
+                        </div>
+                        <div class="card-icon d-flex justify-content-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="105" height="105"
+                                 viewBox="0 0 172 172"
+                                 style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z"
+                                                                                                                                                                                                                                                                                                                                                                fill="none"></path><g fill="#ffffff"><path d="M77.4,17.2c-19.91437,0 -36.12,16.20563 -36.12,36.12c0,0.56438 -0.04031,1.14219 0,1.72c-15.17094,0 -27.52,12.34906 -27.52,27.52c0,15.17094 12.34906,
+                                27.52 27.52,27.52h82.56c18.97375,0 34.4,-15.42625 34.4,-34.4c0,-18.97375 -15.42625,
+                                -34.4 -34.4,-34.4c-4.05812,0 -7.955,0.67188 -11.7175,2.0425c-4.35375,-15.38594 -18.34219,
+                                -26.1225 -34.7225,-26.1225zM86,116.96c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-24.08,24.08c-1.34375,
+                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
+                                -0.29562 2.4725,-0.9675l24.08,-24.08c1.34375,-1.34375 1.34375,-3.60125 0,-4.945c-0.67187,-0.67187 -1.59906,
+                                -0.9675 -2.4725,-0.9675zM44.72,123.84c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-20.64,20.64c-1.34375,
+                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
+                                -0.29562 2.4725,-0.9675l20.64,-20.64c1.34375,-1.34375 1.34375,-3.60125 0,-4.945c-0.67187,-0.67187 -1.59906,
+                                -0.9675 -2.4725,-0.9675zM113.52,123.84c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-20.64,20.64c-1.34375,
+                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
+                                -0.29562 2.4725,-0.9675l20.64,-20.64c1.34375,-1.34375 1.34375,-3.60125 0,
+                                -4.945c-0.67187,-0.67187 -1.59906,-0.9675 -2.4725,-0.9675z"></path></g></g></svg>
+                        </div>
+                        <div class="card-temperature d-flex justify-content-center">
+                            <div class="card-degree">
+                                <span>25&#8451</span>
+                            </div>
+                            <div class="card-degree-condition">
+                                <p>cloudy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--week weather report card-->
+                    <div class="card-sub-section sub-cloudy container-fluid"><!--week weather report card-->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p>sun</p>
+                                <i class="fas fa-poo-storm"></i>
+                                <p>7&#8451</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p>mon</p>
+                                <i class="fas fa-cloud-rain"></i>
+                                <p>18&#8451</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p>tue</p>
+                                <i class="fas fa-cloud-sun"></i>
+                                <p>20&#8451</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p>wed</p>
+                                <i class="far fa-snowflake"></i>
+                                <p>0&#8451</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card " style="width: 18rem; margin:10px">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card " style="width: 18rem; margin:10px">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
+            <!--/daily weather end line-->
+
+            <!--/card of weather of cities-->
             </div>
         </div>
-    </div>
+
+
+
 
 
 </header>
