@@ -1,264 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Natours | Exciting tours for adventurous people</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<header class="header ">
+    <header class="header ">
 
-    <div class="title">
-       <span>WEATHER APP</span>
-    </div>
-
-    <div class="input-group mb-3 search-box custom-input">
-        <input type="text" class="form-control" placeholder="cities' weather" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary border-white text-light custom-button" type="button" id="button-addon2">search</button>
+        <div class="title">
+            <span> WEATHER APP </span>
         </div>
-    </div>
 
-    <div class="container-fluid custom-cards">
-        <div class="row">
-            <!--card of weather of cities-->
-            <div class="col-md-4">
-                <div class="card card-shadow" style="width: 18rem; margin:10px ">
-
-                    <!--daily weather report card-->
-
-                    <div class="card-main-section sunny">
-                        <div class="card-title">
-                            <span>DHAKA,BANGLADESH</span>
-                        </div>
-                        <div class="card-icon d-flex justify-content-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                 width="105" height="105"
-                                 viewBox="0 0 172 172"
-                                 style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,0c-1.49072,0 -2.6875,1.20728 -2.6875,
-                                     2.6875v16.125c0,1.48022 1.19678,2.6875 2.6875,2.6875c1.49072,0 2.6875,-1.20728 2.6875,-2.6875v-16.125c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM56.84692,11.05444c-0.34643,-0.0105 -0.70337,0.05249 -1.0498,0.19946c-1.37524,0.5459 -2.03662,2.11011 -1.48022,3.48535l4.02075,9.97315c0.41992,1.0498 1.42773,1.67969 2.49854,1.67969c0.33594,0 0.67188,-0.06299 1.00781,-0.18897c1.37524,-0.5564 2.03662,-2.1311 1.48022,-3.50635l-4.03125,-9.96265c-0.40942,-1.02881 -1.39624,
-                                     -1.65869 -2.44604,-1.67969zM115.15308,11.05444c-1.0498,0.021 -2.03662,0.65088 -2.44604,1.67969l-4.03125,9.96265c-0.5564,1.37524 0.11548,2.94995 1.48022,3.50635c0.33594,0.12598 0.67188,0.18897 1.00781,0.18897c1.0708,0 2.07861,-0.62988 2.49854,-1.67969l4.02075,
-
-                                     -9.97315c0.5564,-1.37524 -0.10498,-2.93945 -1.48023,-3.48535c-0.34643,-0.14697 -0.70337,-0.20996 -1.0498,-0.19946zM27.08496,24.39746c-0.68237,0 -1.36474,0.26245 -1.88965,0.78735c-1.0603,1.0498 -1.0603,2.75049 0,3.80029l11.39038,11.41138c0.5249,0.5144 1.21777,0.78735 1.91065,0.78735c0.68237,0 1.37524,-0.27295 1.90015,-0.78735c1.0498,-1.0603 1.0498,-2.75049 0,-3.81079l-11.41138,-11.40088c-0.5249,-0.5249 -1.20727,-0.78735 -1.90015,
-                                     -0.78735zM144.91504,24.39746c-0.69287,0 -1.37524,0.26245 -1.90015,0.78735l-11.41138,11.40088c-1.0498,1.0603 -1.0498,2.75049 0,
-                                     3.81079c0.5249,0.5249 1.21777,0.78735 1.90015,0.78735c0.69287,0 1.38574,-0.27295 1.91065,-0.78735l11.39038,-11.41138c1.0603,-1.0498 1.0603,-2.75049 0,-3.80029c-0.5249,-0.5249 -1.20728,-0.78735 -1.88965,-0.78735zM86,26.875c-32.60693,0 -59.125,26.51807 -59.125,59.125c0,32.60693 26.51807,59.125 59.125,59.125c32.60693,0 59.125,-26.51807 59.125,-59.125c0,-32.60693 -26.51807,-59.125 -59.125,-59.125zM86,32.25c29.63599,0 53.75,24.11401 53.75,53.75c0,29.63599 -24.11401,53.75 -53.75,
-                                     53.75c-29.63599,0 -53.75,-24.11401 -53.75,-53.75c0,-29.63599 24.11401,-53.75 53.75,-53.75zM86,43c-10.7395,0 -21.02759,3.98926 -28.96411,11.22241c-1.0918,0.99732 -1.17578,2.698 -0.17847,3.80029c0.5249,0.57739 1.25977,0.87134 1.98413,0.87134c0.65088,0 1.30176,-0.23096 1.81616,-0.70337c6.93921,-6.33032 15.94653,-9.81567 25.34228,-9.81567c4.72412,0 9.33276,0.86084 13.68945,2.56152c1.37524,0.5354 2.93945,-0.13647 3.47485,-1.52222c0.5354,-1.38574 -0.14697,-2.93945 -1.53272,-3.47485c-4.97607,
-                                     -1.95264 -10.23559,-2.93945 -15.63159,-2.93945zM111.13233,52.02832c-0.68238,0.07349 -1.34375,0.40942 -1.81616,0.97632c-0.93433,1.15479 -0.75586,2.84497 0.39893,3.7793c1.43823,1.17578 2.81348,2.46704 4.07324,3.85278c0.5249,0.57739 1.25977,0.87134 1.98413,0.87134c0.65088,0 1.30176,-0.23096 1.81616,-0.70337c1.0918,-1.00781 1.16528,-2.70849 0.16797,-3.80029c-1.44873,-1.57471 -3.01294,-3.05493 -4.65063,-4.38818c-0.57739,-0.47241 -1.29126,-0.66138 -1.97363,-0.58789zM13.68945,54.11743c-1.03931,0.0105 -2.02612,
-                                     0.65088 -2.44604,1.67969c-0.5564,1.37524 0.11548,2.93945 1.48022,3.49585l9.97315,4.03125c0.32544,0.13647 0.67188,0.19946 1.00781,0.19946c1.0603,0 2.06811,-0.64038 2.48804,-1.67969c0.5564,-1.38574 -0.10498,-2.94995 -1.48022,-3.50635l-9.97315,-4.03125c-0.33594,-0.13647 -0.69287,-0.19946 -1.0498,-0.18896zM158.31055,54.11743c-0.35693,-0.0105 -0.71387,0.05249 -1.0498,0.18896l-9.97314,4.03125c-1.37524,0.5564 -2.03662,2.12061 -1.48023,3.50635c0.41992,1.03931 1.42773,1.67969 2.48804,1.67969c0.33594,0 0.68237,
-                                     -0.06299 1.00781,-0.19946l9.97314,-4.03125c1.37524,-0.5564 2.03662,-2.1206 1.48022,-3.49585c-0.41992,-1.02881 -1.40674,-1.66919 -2.44604,-1.67969zM2.6875,83.3125c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h16.125c1.49072,0 2.6875,-1.20728 2.6875,-2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM153.1875,83.3125c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875c0,1.48022 1.19678,2.6875 2.6875,2.6875h16.125c1.49072,0 2.6875,-1.20728 2.6875,
-                                     -2.6875c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM53.83398,96.95996c-0.35693,0.0105 -0.70337,0.07349 -1.0498,0.20996l-4.94458,2.09961c-1.36474,0.58789 -2.00512,2.1626 -1.42773,3.52734c0.44092,1.02881 1.42773,1.6377 2.47754,1.6377c0.35693,0 0.70337,-0.06299 1.0498,-0.20996l4.94458,-2.09961c1.37524,-0.57739 2.00513,-2.1521 1.42773,-3.52734c-0.44092,-1.01831 -1.43823,-1.6377 -2.47754,-1.6377zM61.2981,108.0144c-0.69287,0 -1.37524,0.26245 -1.90015,0.78735l-3.80029,3.80029c-1.0498,
-                                     1.0498 -1.0498,2.75049 0,3.80029c0.5249,0.5249 1.20728,0.78735 1.90015,0.78735c0.69287,0 1.37524,-0.26245 1.90015,-0.78735l3.80029,-3.80029c1.0498,-1.0498 1.0498,-2.75049 0,-3.80029c-0.5249,-0.5249 -1.20728,-0.78735 -1.90015,-0.78735zM23.74658,108.47632c-0.34644,0 -0.70337,0.06299 -1.0498,0.19946l-9.97315,4.03125c-1.37524,0.5564 -2.03662,2.12061 -1.48022,3.49585c0.41992,1.0498 1.42773,1.67969 2.48804,1.67969c0.33594,0 0.68237,-0.05249 1.00781,-0.18896l9.97315,-4.03125c1.37524,-0.5564 2.03662,
-                                     -2.12061 1.48022,-3.50635c-0.41992,-1.02881 -1.39624,-1.65869 -2.44604,-1.67969zM148.26392,108.48682c-1.0498,0.02099 -2.03662,0.64038 -2.45654,1.66919c-0.5564,1.38574 0.10498,2.94995 1.48023,3.50635l9.97314,4.03125c0.32544,0.13647 0.67188,0.18896 1.00781,0.18896c1.0603,0 2.06811,-0.62988 2.48804,-1.67969c0.5564,-1.37524 -0.11548,-2.93945 -1.48022,-3.49585l-9.97314,-4.03125c-0.34644,-0.13647 -0.69287,-0.19946 -1.03931,-0.18896zM72.86694,115.70947c-1.0393,0.02099 -2.02612,0.65088 -2.44604,
-                                     1.67969l-2.01562,4.97607c-0.5564,1.38574 0.11548,2.94995 1.49072,3.50635c0.32544,0.13647 0.66137,0.18896 0.99731,0.18896c1.0708,0 2.07861,-0.62988 2.49854,-1.67969l2.01563,-4.98657c0.5459,-1.37524 -0.11548,-2.93945 -1.49072,-3.49585c-0.33594,-0.13647 -0.69287,-0.19946 -1.0498,-0.18896zM99.13306,115.70947c-0.35693,-0.0105 -0.70337,0.05249 -1.0498,0.18896c-1.37524,0.5564 -2.03662,2.12061 -1.49072,3.49585l2.01563,4.98657c0.41992,1.0498 1.42773,1.67969 2.49854,1.67969c0.33594,0 0.67188,-0.05249 0.99732,
-                                     -0.18896c1.37524,-0.5564 2.04712,-2.12061 1.49072,-3.50635l-2.01562,-4.97607c-0.41992,-1.02881 -1.40674,-1.65869 -2.44604,-1.67969zM86,118.25c-1.49072,0 -2.6875,1.20728 -2.6875,2.6875v5.375c0,1.48022 1.19678,2.6875 2.6875,2.6875c1.49072,0 2.6875,-1.20728 2.6875,-2.6875v-5.375c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875zM38.49634,130.81616c-0.69287,0 -1.37524,0.26245 -1.91065,0.78735l-11.39038,11.41138c-1.0603,1.0498 -1.0603,2.75049 0,3.80029c0.5144,0.5249 1.20728,0.78735 1.88965,0.78735c0.69287,0 1.38574,-0.26245 1.90015,-0.78735l11.41138,-11.40088c1.0498,
-                                     -1.0603 1.0498,-2.75049 0,-3.81079c-0.5354,-0.5249 -1.21777,-0.78735 -1.90015,-0.78735zM133.50366,130.81616c-0.68237,0 -1.36474,0.26245 -1.90015,0.78735c-1.0498,1.0603 -1.0498,2.75049 0,3.81079l11.41138,11.40088c0.5144,0.5249 1.20728,0.78735 1.90015,0.78735c0.68237,0 1.37524,-0.26245 1.88965,-0.78735c1.0603,-1.0498 1.0603,-2.75049 0,-3.80029l-11.39038,-11.41138c-0.5354,-0.5249 -1.21777,-0.78735 -1.91065,-0.78735zM60.79419,145.60791c-1.0498,0.02099 -2.03662,0.65088 -2.45654,1.67969l-4.02075,9.97314c-0.5564,1.37524 0.10498,2.93945 1.48022,3.48535c0.32544,
-                                     0.13647 0.67188,0.20996 1.00781,0.20996c1.0603,0 2.06811,-0.64038 2.48804,-1.69018l4.03125,-9.96265c0.5564,-1.37524 -0.11548,-2.94995 -1.48022,-3.50635c-0.34643,-0.13647 -0.70337,-0.19946 -1.0498,-0.18896zM111.20581,145.60791c-0.34643,-0.0105 -0.70337,0.05249 -1.0498,0.18896c-1.37524,0.5564 -2.03662,2.1311 -1.48022,3.50635l4.03125,9.96265c0.41992,1.0498 1.42773,1.69018 2.48804,1.69018c0.33594,0 0.68238,-0.07349 1.00781,-0.20996c1.37524,-0.5459 2.03662,-2.11011 1.48023,-3.48535l-4.02075,-9.97314c-0.41992,-1.02881 -1.40674,-1.65869 -2.45654,-1.67969zM86,150.5c-1.49072,0 -2.6875,
-                                     1.20728 -2.6875,2.6875v16.125c0,1.48022 1.19678,2.6875 2.6875,2.6875c1.49072,0 2.6875,
-                                     -1.20728 2.6875,-2.6875v-16.125c0,-1.48022 -1.19678,-2.6875 -2.6875,-2.6875z"></path></g></g></svg>
-                        </div>
-                            <div class="card-temperature d-flex justify-content-center">
-                                <div class="card-degree">
-                                    <span>7&#8451</span>
-                                </div>
-                                <div class="card-degree-condition">
-                                    <p>sunny</p>
-                                </div>
-                            </div>
-                    </div>
-
-                    <!--week weather report card-->
-                    <div class="card-sub-section sub-sunny container-fluid"><!--week weather report card-->
-                        <div class="row">
-                            <div class="col-md-3">
-                                <p>sun</p>
-                                <i class="fas fa-poo-storm"></i>
-                                <p>7&#8451</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>mon</p>
-                                <i class="fas fa-cloud-rain"></i>
-                                <p>18&#8451</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>tue</p>
-                                <i class="fas fa-cloud-sun"></i>
-                                <p>20&#8451</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>wed</p>
-                                <i class="far fa-snowflake"></i>
-                                <p>0&#8451</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--/daily weather end line-->
-
-            <!--/card of weather of cities-->
-
-
-            <!--card of weather of cities-->
-            <div class="col-md-4">
-                <div class="card card-shadow" style="width: 18rem; margin:10px ">
-
-                    <!--daily weather report card-->
-
-                    <div class="card-main-section rainy">
-                        <div class="card-title">
-                            <span>LONDON,UK</span>
-                        </div>
-                        <div class="card-icon d-flex justify-content-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                 width="105" height="105"
-                                 viewBox="0 0 172 172"
-                                 style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z"
-                                fill="none"></path><g fill="#ffffff"><path d="M77.4,17.2c-19.91437,0 -36.12,16.20563 -36.12,36.12c0,0.56438 -0.04031,1.14219 0,1.72c-15.17094,0 -27.52,12.34906 -27.52,27.52c0,15.17094 12.34906,
-                                27.52 27.52,27.52h82.56c18.97375,0 34.4,-15.42625 34.4,-34.4c0,-18.97375 -15.42625,
-                                -34.4 -34.4,-34.4c-4.05812,0 -7.955,0.67188 -11.7175,2.0425c-4.35375,-15.38594 -18.34219,
-                                -26.1225 -34.7225,-26.1225zM86,116.96c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-24.08,24.08c-1.34375,
-                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
-                                -0.29562 2.4725,-0.9675l24.08,-24.08c1.34375,-1.34375 1.34375,-3.60125 0,-4.945c-0.67187,-0.67187 -1.59906,
-                                -0.9675 -2.4725,-0.9675zM44.72,123.84c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-20.64,20.64c-1.34375,
-                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
-                                -0.29562 2.4725,-0.9675l20.64,-20.64c1.34375,-1.34375 1.34375,-3.60125 0,-4.945c-0.67187,-0.67187 -1.59906,
-                                -0.9675 -2.4725,-0.9675zM113.52,123.84c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-20.64,20.64c-1.34375,
-                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
-                                -0.29562 2.4725,-0.9675l20.64,-20.64c1.34375,-1.34375 1.34375,-3.60125 0,
-                                -4.945c-0.67187,-0.67187 -1.59906,-0.9675 -2.4725,-0.9675z"></path></g></g></svg>
-                        </div>
-                        <div class="card-temperature d-flex justify-content-center">
-                            <div class="card-degree">
-                                <span>18&#8451</span>
-                            </div>
-                            <div class="card-degree-condition">
-                                <p>rainy</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--week weather report card-->
-                    <div class="card-sub-section sub-rainy container-fluid"><!--week weather report card-->
-                        <div class="row">
-                            <div class="col-md-3">
-                                <p>sun</p>
-                                <i class="fas fa-poo-storm"></i>
-                                <p>7&#8451</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>mon</p>
-                                <i class="fas fa-cloud-rain"></i>
-                                <p>18&#8451</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>tue</p>
-                                <i class="fas fa-cloud-sun"></i>
-                                <p>20&#8451</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>wed</p>
-                                <i class="far fa-snowflake"></i>
-                                <p>0&#8451</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--/daily weather end line-->
-
-            <!--/card of weather of cities-->
-
-
-
-
-            <!--card of weather of cities-->
-            <div class="col-md-4">
-                <div class="card card-shadow" style="width: 18rem; margin:10px ">
-
-                    <!--daily weather report card-->
-
-                    <div class="card-main-section cloudy">
-                        <div class="card-title">
-                            <span>TOKYO,JAPAN</span>
-                        </div>
-                        <div class="card-icon d-flex justify-content-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                 width="105" height="105"
-                                 viewBox="0 0 172 172"
-                                 style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z"
-                                                                                                                                                                                                                                                                                                                                                                fill="none"></path><g fill="#ffffff"><path d="M77.4,17.2c-19.91437,0 -36.12,16.20563 -36.12,36.12c0,0.56438 -0.04031,1.14219 0,1.72c-15.17094,0 -27.52,12.34906 -27.52,27.52c0,15.17094 12.34906,
-                                27.52 27.52,27.52h82.56c18.97375,0 34.4,-15.42625 34.4,-34.4c0,-18.97375 -15.42625,
-                                -34.4 -34.4,-34.4c-4.05812,0 -7.955,0.67188 -11.7175,2.0425c-4.35375,-15.38594 -18.34219,
-                                -26.1225 -34.7225,-26.1225zM86,116.96c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-24.08,24.08c-1.34375,
-                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
-                                -0.29562 2.4725,-0.9675l24.08,-24.08c1.34375,-1.34375 1.34375,-3.60125 0,-4.945c-0.67187,-0.67187 -1.59906,
-                                -0.9675 -2.4725,-0.9675zM44.72,123.84c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-20.64,20.64c-1.34375,
-                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
-                                -0.29562 2.4725,-0.9675l20.64,-20.64c1.34375,-1.34375 1.34375,-3.60125 0,-4.945c-0.67187,-0.67187 -1.59906,
-                                -0.9675 -2.4725,-0.9675zM113.52,123.84c-0.87344,0 -1.80062,0.29563 -2.4725,0.9675l-20.64,20.64c-1.34375,
-                                1.34375 -1.34375,3.60125 0,4.945c0.67188,0.67188 1.58563,0.9675 2.4725,0.9675c0.88688,0 1.80063,
-                                -0.29562 2.4725,-0.9675l20.64,-20.64c1.34375,-1.34375 1.34375,-3.60125 0,
-                                -4.945c-0.67187,-0.67187 -1.59906,-0.9675 -2.4725,-0.9675z"></path></g></g></svg>
-                        </div>
-                        <div class="card-temperature d-flex justify-content-center">
-                            <div class="card-degree">
-                                <span>25&#8451</span>
-                            </div>
-                            <div class="card-degree-condition">
-                                <p>cloudy</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--week weather report card-->
-                    <div class="card-sub-section sub-cloudy container-fluid"><!--week weather report card-->
-                        <div class="row">
-                            <div class="col-md-3">
-                                <p>sun</p>
-                                <i class="fas fa-poo-storm"></i>
-                                <p>7&#8451</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>mon</p>
-                                <i class="fas fa-cloud-rain"></i>
-                                <p>18&#8451</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>tue</p>
-                                <i class="fas fa-cloud-sun"></i>
-                                <p>20&#8451</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>wed</p>
-                                <i class="far fa-snowflake"></i>
-                                <p>0&#8451</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--/daily weather end line-->
-
-            <!--/card of weather of cities-->
+        <div class="input-group mb-3 search-box custom-input">
+            <input type="text" class="form-control" id="input_text" placeholder="cities' weather" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary border-white text-light custom-button" type="submit" id="submit_button">search</button>
             </div>
         </div>
 
+        <div class="container-fluid custom-cards">
+            <div class="row" id="getWeatherCard">
+            </div>
+            <!--card of weather of cities-->
+
+            <!--/card of weather of cities-->
+        </div>
+    </header>
 
 
 
-
-</header>
-
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/34ff218b69.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/34ff218b69.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
