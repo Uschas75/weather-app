@@ -4,11 +4,13 @@ var count = 0;
 var cardArray = [];
 var Days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat'];
 const apiKey = "6b8e5fb2ae913cde1f97fa00d0b389ad";
+var currentWeatherUrl;
+var upcomingWeatherUrl;
 
-button.addEventListener('click', async function(name) {
+async function fetchWeatherApi(currentWeatherUrl, upcomingWeatherUrl) {
     Promise.all([
-        await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + input.value + '&appid=' + apiKey),
-        await fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + input.value + '&appid=' + apiKey)
+        await fetch(currentWeatherUrl),
+        await fetch(upcomingWeatherUrl)
     ]).then(function(responses) {
         // Get a JSON object from each of the responses
         return Promise.all(responses.map(function(response) {
@@ -21,6 +23,41 @@ button.addEventListener('click', async function(name) {
         alert("Wrong city name!");
         console.log(error);
     });
+}
+
+function getLocation() {
+    if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(setPosition, showError);
+    } else {
+        console.log("Browser doesn't Support Geolocation");
+    }
+}
+
+function setPosition(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    console.log(latitude);
+    getWeather(latitude, longitude);
+}
+
+function showError(error) {
+    console.log(error.message);
+}
+
+function getWeather(latitude, longitude) {
+    let LocationCurrentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&appid=' + apiKey;
+    let LocationUpcomingWeatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + latitude + '&lon=' + longitude + '&appid=' + apiKey;
+
+    fetchWeatherApi(LocationCurrentWeatherUrl, LocationUpcomingWeatherUrl);
+}
+
+getLocation();
+
+button.addEventListener('click', function(name) {
+    let searchedCurrentWeatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + input.value + '&appid=' + apiKey;
+    let searchedUpcomingWeatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + input.value + '&appid=' + apiKey;
+
+    fetchWeatherApi(searchedCurrentWeatherUrl, searchedUpcomingWeatherUrl);
 })
 
 function getSearchResult(data) {
@@ -45,7 +82,7 @@ function getSearchResult(data) {
 
     let weatherCard = '<div class="col-md-4">' +
         '<div class="card card-shadow" style="width: 18rem; margin:10px ">' +
-        '<div class="card-main-section sunny">' +
+        (tempValue >= 29 ? '<div class="card-main-section sunny">' : tempValue <= 24 ? '<div class="card-main-section rainy">' : '<div class="card-main-section cloudy">') +
         '<div class="card-title">' +
         '<span>' + data[0]['name'] + '</span>' +
         '</div>' +
@@ -62,7 +99,7 @@ function getSearchResult(data) {
         '</div>' +
         '</div>' +
         '</div>' +
-        '<div class="card-sub-section sub-sunny container-fluid">' +
+        (tempValue >= 29 ? '<div class="card-sub-section sub-sunny container-fluid">' : tempValue <= 24 ? '<div class="card-sub-section sub-rainy container-fluid">' : '<div class="card-sub-section sub-cloudy container-fluid">') +
         '<div class="row">' +
         '<div class="col-md-3">' +
         '<p>' + nextDaysName[0] + '</p>' +
@@ -103,5 +140,4 @@ function getSearchResult(data) {
         cardArray.pop(weatherCard);
         $("#getWeatherCard").html(cardArray);
     }
-
 }
