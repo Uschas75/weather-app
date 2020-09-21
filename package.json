@@ -1,0 +1,23 @@
+{
+    "name": "weather-app-master",
+    "version": "1.0.0",
+    "description": "This is a sipmle Weather App. Search Any city's weather and get the current weather and also the upcoming weather of that city.",
+    "main": "index.js",
+    "scripts": {
+        "deploy": "gh-pages -d dist"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Uschas75/weather-app.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Uschas75/weather-app/issues"
+    },
+    "homepage": "https://Uschas75.github.io/weather-app",
+    "dependencies": {
+        "gh-pages": "^3.1.0"
+    }
+}
